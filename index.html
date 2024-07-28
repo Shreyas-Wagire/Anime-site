@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimeCafe | by Shreyas Wagire</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="utility.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+BE+VLG:wght@100..400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="nav-container">
+            <h1><a href="#">AnimeCafe</a></h1>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="#" id="home-link" class="active">Home</a></li>
+                    <li><a href="#">Popular</a></li>
+                    <li><a href="#">Upcoming</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="content">
+        <!-- Content will be loaded here by JavaScript -->
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>We are dedicated to bringing you the best anime content.</p>
+            </div>
+            <div class="footer-section subscribe">
+                <h3>Subscribe</h3>
+                <input type="email" id="subscribe-email" placeholder="Enter your email">
+                <button onclick="subscribe()">Subscribe</button>
+                <!-- <button class="button-52" role="button" onclick="subscribe()">Button 52</button> -->
+            </div>
+            <div class="footer-section social-media">
+                <a href="#" class="social-link">Facebook</a>
+                <a href="#" class="social-link">Twitter</a>
+                <a href="#" class="social-link">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="anime-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modal-image" src="" alt="Anime Poster">
+            <h2 id="modal-title"></h2>
+            <p id="modal-genres"></p>
+            <p id="modal-release-date"></p>
+            <p id="modal-description"></p>
+            <button onclick="addToFavorites()">Add to Favorites</button>
+            <button onclick="openAnimeLink()">Watch Now</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

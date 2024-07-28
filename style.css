@@ -1,0 +1,419 @@
+/* General Styles */
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url('double-bubble-dark.png');
+  object-fit: cover;
+  box-sizing: border-box;
+  background-position: center;
+  cursor: url('cursor.png'), auto;
+}
+
+::-webkit-scrollbar{
+  background-color: #23252b;
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ff0000;
+  border-radius: 50px;
+}
+
+
+header {
+  background-color: #23252b;
+  color: white;
+  padding: 5px 0;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 56px;
+}
+
+/* Navigation Link Styles */
+.nav-container h1 a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  font-family: "Playwrite BE VLG", cursive;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.nav-container h1 a:hover {
+  color: #ffcc00;
+  /* Change this to your desired hover color */
+  text-shadow: 0 4px 8px rgba(255, 255, 255, 0.5);
+  /* Subtle glow effect */
+}
+
+/* Additional hover animation (optional) */
+@keyframes hoverAnimation {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.nav-container h1 a:hover {
+  color: #01cfff;
+  text-shadow: 0 4px 8px rgb(0 0 0 / 50%);
+  animation: hoverAnimation 0.6s ease-in-out;
+}
+
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+nav ul li a:hover {
+  background-color: #141519;
+  text-decoration: none;
+  padding: 12px 10px;
+  border-radius: 5px;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+  /* background: #555; */
+}
+
+/* Main Content */
+main {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero {
+  border-radius: 42px;
+  /* background: #f8f8f8; */
+  text-align: center;
+  padding: 30px 20px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.hero h2 {
+  margin: 0 0 10px;
+  font-size: xxx-large;
+}
+
+.hero p {
+  margin: 0 0 20px;
+}
+
+.hero button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Anime List */
+.anime-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.anime-item {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 180px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.anime-item img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.anime-info {
+  padding: 10px;
+  /* display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  text-align: center; */
+}
+
+.anime-info h3 {
+  margin: 0 0 5px;
+  font-size: 16px;
+}
+
+.anime-info p {
+  margin: 0;
+  color: #555;
+  font-size: 14px;
+}
+
+.anime-info .anime-release-date {
+  margin-top: 5px;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 90%;
+  box-sizing: border-box;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content img {
+  max-width: 100%;
+  height: 450px;
+  border-radius: 10px;
+}
+
+
+.modal-content h2 {
+  margin: 20px 0;
+  font-size: 24px;
+}
+
+.modal-content p {
+  margin: 10px 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.modal-content button {
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background: #333;
+  color: white;
+}
+
+.modal-content button:hover {
+  background: #555;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: white;
+  padding: 20px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  max-width: 300px;
+  margin: 10px;
+}
+
+.footer-section h3 {
+  margin: 0 0 10px;
+}
+
+.footer-section p,
+.footer-section input,
+.footer-section button {
+  margin: 10px 0;
+}
+
+.footer-section input {
+  padding: 10px;
+  width: calc(100% - 22px);
+  border: none;
+  border-radius: 5px;
+}
+
+.footer-section button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background: #555;
+  color: white;
+  cursor: pointer;
+}
+
+.footer-section button:hover {
+  background: #444;
+}
+
+.social-media {
+  display: flex;
+  gap: 15px;
+}
+
+.social-link {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.social-link:hover {
+  text-decoration: underline;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .nav-container h1 a {
+    font-size: 20px;
+  }
+
+  .hero button {
+    font-size: 14px;
+  }
+
+  .anime-item {
+    width: 160px;
+  }
+
+  .modal-content {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 5px 0;
+  }
+
+  .anime-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .anime-item {
+    width: 90%;
+    max-width: 400px;
+  }
+
+  .hero {
+    padding: 20px;
+  }
+
+  .modal-content {
+    width: 95%;
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h2 {
+    font-size: 20px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .anime-info h3 {
+    font-size: 14px;
+  }
+
+  .anime-info p {
+    font-size: 12px;
+  }
+
+  .modal-content h2 {
+    font-size: 20px;
+  }
+
+  .modal-content p {
+    font-size: 12px;
+  }
+
+  .modal-content button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+::-moz-selection { 
+  background: rgba(255, 0, 0, 0.712);
+}
+
+::selection {
+  background: rgba(255, 0, 0, 0.712);
+  color: white;
+}
